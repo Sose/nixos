@@ -17,19 +17,19 @@
       system = "x86_64-linux";
       # specialArgs = {inherit inputs;};
       modules = [
-        ./configuration.nix
-        ./locale.nix
-        ./nvidia.nix
-        ./kdeplasma.nix
+        ./hosts/default/configuration.nix
+        ./modules/locale.nix
+        ./modules/nvidia.nix
+        ./modules/kdeplasma.nix
         #./gnome.nix
-        ./gaming.nix
-        ./virtualization.nix
+        ./modules/gaming.nix
+        ./modules/virtualization.nix
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
 
-          home-manager.users.sose = ./home.nix;
+          home-manager.users.sose = ./hosts/default/home.nix;
         }
       ];
     };
