@@ -114,9 +114,7 @@
 
   programs.gh = {
     enable = true;
-    gitCredentialHelper = {
-      enable = true;
-    };
+    gitCredentialHelper = { enable = true; };
   };
 
   # starship - an customizable prompt for any shell
@@ -160,6 +158,7 @@
         "python3 -c 'import sys, urllib.parse as ul; print(ul.unquote_plus(sys.stdin.read()))'";
       urlencode =
         "python3 -c 'import sys, urllib.parse as ul; print(ul.quote_plus(sys.stdin.read()))'";
+      ec = "emacsclient -n -c";
     };
   };
 
