@@ -5,7 +5,7 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ 
+  imports = [
     ./hardware-configuration.nix # Include the results of the hardware scan.
   ];
 
@@ -66,7 +66,7 @@
   environment.systemPackages = with pkgs; [
     vim
     neovim
-    emacs 
+    emacs
     wget
     curl
 

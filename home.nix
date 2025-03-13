@@ -28,7 +28,7 @@
   home.packages = with pkgs; [
     # video viewer
     mpv
-    
+
     # gnu stow for managing dotfiles (why not use home-manager?)
     stow
 
@@ -55,6 +55,7 @@
     yq-go # yaml processor https://github.com/mikefarah/yq
     eza # A modern replacement for ‘ls’
     fzf # A command-line fuzzy finder
+    nixfmt # nix formatter
 
     # networking tools
     mtr # A network diagnostic tool
