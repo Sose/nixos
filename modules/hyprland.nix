@@ -3,7 +3,10 @@
   programs.hyprland.enable = true;
 
   environment.systemPackages = with pkgs; [
-    waybar
-    wofi
+    waybar # a bar
+    wofi # application launcher
+    swaynotificationcenter # swaync
+    hypridle # idle daemon
+    hyprlock # screen locking
   ];
 }
