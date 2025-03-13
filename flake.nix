@@ -22,6 +22,7 @@
         ./modules/audio.nix
         ./modules/nvidia.nix
         ./modules/kdeplasma.nix
+        ./modules/hyprland.nix
         #./gnome.nix
         ./modules/gaming.nix
         ./modules/virtualization.nix

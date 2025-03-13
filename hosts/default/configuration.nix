@@ -23,9 +23,6 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # Hyprland
-  programs.hyprland.enable = true;
-
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
@@ -61,9 +58,6 @@
     gcc
     clang
     libtool
-
-    waybar # for hyprland
-    #ptyxis # terminal
   ];
 
   # Fonts
