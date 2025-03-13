@@ -20,44 +20,13 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-
-  # Set your time zone.
-  time.timeZone = "Europe/Helsinki";
-
-  # Select internationalisation properties.
-  i18n.defaultLocale = "en_US.UTF-8";
-
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "fi_FI.UTF-8";
-    LC_IDENTIFICATION = "fi_FI.UTF-8";
-    LC_MEASUREMENT = "fi_FI.UTF-8";
-    LC_MONETARY = "fi_FI.UTF-8";
-    LC_NAME = "fi_FI.UTF-8";
-    LC_NUMERIC = "fi_FI.UTF-8";
-    LC_PAPER = "fi_FI.UTF-8";
-    LC_TELEPHONE = "fi_FI.UTF-8";
-    LC_TIME = "fi_FI.UTF-8";
-  };
-
+  
   # Enable the X11 windowing system.
   services.xserver.enable = true;
-
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
 
   # Hyprland
   programs.hyprland.enable = true;
   
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "fi";
-    variant = "";
-  };
-
-  # Configure console keymap
-  console.keyMap = "fi";
-
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
@@ -104,7 +73,7 @@
 
      fastfetch
 
-     cmake gnumake gcc clang
+     cmake gnumake gcc clang libtool
 
      waybar # for hyprland
      #ptyxis # terminal

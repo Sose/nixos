@@ -19,6 +19,11 @@
   #     xxx
   # '';
 
+  services.emacs = {
+    enable = true; # enable emacs service for emacs-client
+    package = pkgs.emacs; 
+  };
+
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     # here is some command line tools I use frequently

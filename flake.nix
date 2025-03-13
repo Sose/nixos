@@ -18,12 +18,14 @@
       # specialArgs = {inherit inputs;};
       modules = [
         ./configuration.nix
+        ./locale.nix
         ./nvidia.nix
-	home-manager.nixosModules.home-manager {
-	   home-manager.useGlobalPkgs = true;
-           home-manager.useUserPackages = true;
+        ./gnome.nix
+	      home-manager.nixosModules.home-manager {
+	        home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
 
-           home-manager.users.sose = import ./home.nix;
+          home-manager.users.sose = import ./home.nix;
       	}
       ];
     };
