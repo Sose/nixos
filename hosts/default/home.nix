@@ -46,8 +46,8 @@
     p7zip
 
     # version control
-    git
-    gh # github cli
+    #git
+    #gh # github cli
 
     # utils
     ripgrep # recursively searches directories for a regex pattern
@@ -106,11 +106,18 @@
   ];
 
   # basic configuration of git, please change to your own
-  #programs.git = {
-  #  enable = true;
-  #  userName = "Joni Hiltunen";
-  #  userEmail = "djonih@gmail.com";
-  #};
+  programs.git = {
+    enable = true;
+    userName = "Joni Hiltunen";
+    userEmail = "djonih@gmail.com";
+  };
+
+  programs.gh = {
+    enable = true;
+    gitCredentialHelper = {
+      enable = true;
+    };
+  };
 
   # starship - an customizable prompt for any shell
   programs.starship = {
