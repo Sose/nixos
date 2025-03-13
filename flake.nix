@@ -23,6 +23,7 @@
         ./kdeplasma.nix
         #./gnome.nix
         ./gaming.nix
+        ./virtualization.nix
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
