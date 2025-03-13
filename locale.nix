@@ -1,6 +1,5 @@
-{ config, pkgs, ... }:
-{
-# Set your time zone.
+{ config, pkgs, ... }: {
+  # Set your time zone.
   time.timeZone = "Europe/Helsinki";
 
   # Select internationalisation properties.

@@ -5,10 +5,9 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [ 
+    ./hardware-configuration.nix # Include the results of the hardware scan.
+  ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -20,13 +19,13 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-  
+
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
   # Hyprland
   programs.hyprland.enable = true;
-  
+
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
@@ -54,9 +53,6 @@
     isNormalUser = true;
     description = "Joni Hiltunen";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-    #  thunderbird
-    ];
   };
 
   # Install firefox.
@@ -68,15 +64,22 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-     vim neovim emacs # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-     wget curl
+    vim
+    neovim
+    emacs 
+    wget
+    curl
 
-     fastfetch
+    fastfetch
 
-     cmake gnumake gcc clang libtool
+    cmake
+    gnumake
+    gcc
+    clang
+    libtool
 
-     waybar # for hyprland
-     #ptyxis # terminal
+    waybar # for hyprland
+    #ptyxis # terminal
   ];
 
   # Fonts

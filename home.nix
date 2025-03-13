@@ -21,21 +21,21 @@
 
   services.emacs = {
     enable = true; # enable emacs service for emacs-client
-    package = pkgs.emacs; 
+    package = pkgs.emacs;
   };
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
-    # here is some command line tools I use frequently
-    # feel free to add your own or remove some of them
-
+    # video viewer
+    mpv
+    
     # gnu stow for managing dotfiles (why not use home-manager?)
     stow
-    
+
     # some common apps
     discord
     spotify
-    
+
     fastfetch
     #nnn # terminal file manager
 
@@ -48,7 +48,7 @@
     # version control
     git
     gh # github cli
-    
+
     # utils
     ripgrep # recursively searches directories for a regex pattern
     jq # A lightweight and flexible command-line JSON processor
@@ -59,12 +59,12 @@
     # networking tools
     mtr # A network diagnostic tool
     #iperf3
-    dnsutils  # `dig` + `nslookup`
+    dnsutils # `dig` + `nslookup`
     #ldns # replacement of `dig`, it provide the command `drill`
     #aria2 # A lightweight multi-protocol & multi-source command-line download utility
     socat # replacement of openbsd-netcat
     nmap # A utility for network discovery and security auditing
-    ipcalc  # it is a calculator for the IPv4/v6 addresses
+    ipcalc # it is a calculator for the IPv4/v6 addresses
 
     # misc
     cowsay
@@ -87,7 +87,7 @@
     hugo # static site generator
     glow # markdown previewer in terminal
 
-    btop  # replacement of htop/nmon
+    btop # replacement of htop/nmon
     iotop # io monitoring
     iftop # network monitoring
 
@@ -148,9 +148,10 @@
 
     # set some aliases, feel free to add more or remove some
     shellAliases = {
-     k = "kubectl";
-      urldecode = "python3 -c 'import sys, urllib.parse as ul; print(ul.unquote_plus(sys.stdin.read()))'";
-      urlencode = "python3 -c 'import sys, urllib.parse as ul; print(ul.quote_plus(sys.stdin.read()))'";
+      urldecode =
+        "python3 -c 'import sys, urllib.parse as ul; print(ul.unquote_plus(sys.stdin.read()))'";
+      urlencode =
+        "python3 -c 'import sys, urllib.parse as ul; print(ul.quote_plus(sys.stdin.read()))'";
     };
   };
 
