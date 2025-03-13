@@ -24,6 +24,13 @@
     # here is some command line tools I use frequently
     # feel free to add your own or remove some of them
 
+    # gnu stow for managing dotfiles (why not use home-manager?)
+    stow
+    
+    # some common apps
+    discord
+    spotify
+    
     fastfetch
     #nnn # terminal file manager
 

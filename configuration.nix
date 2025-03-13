@@ -46,6 +46,9 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
 
+  # Hyprland
+  programs.hyprland.enable = true;
+  
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "fi";
@@ -59,7 +62,7 @@
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -100,6 +103,11 @@
      wget curl
 
      fastfetch
+
+     cmake gnumake gcc clang
+
+     waybar # for hyprland
+     #ptyxis # terminal
   ];
 
   # Fonts
@@ -111,11 +119,11 @@
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
+  programs.mtr.enable = true;
+  programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = true;
+  };
 
   # List services that you want to enable:
 
