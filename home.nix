@@ -33,8 +33,11 @@
     unzip
     p7zip
 
-    # utils
+    # version control
+    git
     gh # github cli
+    
+    # utils
     ripgrep # recursively searches directories for a regex pattern
     jq # A lightweight and flexible command-line JSON processor
     yq-go # yaml processor https://github.com/mikefarah/yq
@@ -90,11 +93,11 @@
   ];
 
   # basic configuration of git, please change to your own
-  programs.git = {
-    enable = true;
-    userName = "Joni Hiltunen";
-    userEmail = "djonih@gmail.com";
-  };
+  #programs.git = {
+  #  enable = true;
+  #  userName = "Joni Hiltunen";
+  #  userEmail = "djonih@gmail.com";
+  #};
 
   # starship - an customizable prompt for any shell
   programs.starship = {
