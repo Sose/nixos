@@ -19,6 +19,7 @@
       modules = [
         ./hosts/default/configuration.nix
         ./modules/locale.nix
+        ./modules/audio.nix
         ./modules/nvidia.nix
         ./modules/kdeplasma.nix
         #./gnome.nix
